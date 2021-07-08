@@ -1,0 +1,35 @@
+div.signup {
+  border: solid 2px #57007D;
+  background-color: #D173FA;
+}
+
+form {
+  display: block;
+  border-top: solid 1px #57007D;
+  background-color: #F4DAFE;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+div.field {
+  display: block;
+  padding: 0.3em;
+} 
+
+label {
+  display: inline-block;
+  width: 5em;
+  margin-right: 0.5em;
+  text-align: right;
+}
+
+input {
+  display: inline-block;
+  width: 12em;
+}
+
+button {
+  display: block;
+  width: 10em;
+  margin: 1em auto;
+}
