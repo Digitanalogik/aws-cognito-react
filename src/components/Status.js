@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { AccountContext } from './Account';
+import '../styles/session.css';
 
 const Status = () => {
   const [status, setStatus] = useState(false);
 
-  const { getSession } = useContext(AccountContext);
+  const { getSession, logout } = useContext(AccountContext);
 
   useEffect(() => {
     getSession()
@@ -14,7 +15,11 @@ const Status = () => {
       });
   }, [getSession]);
 
-  return <div>{status ? "You're logged in" : "Please login"}</div>;
+  return (
+    <div className="session">
+      {status ? <button onClick={logout}>Logout</button> : "Please login"}
+    </div>
+  );
 };
 
 export default Status;

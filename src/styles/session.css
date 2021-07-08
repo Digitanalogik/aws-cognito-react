@@ -1,0 +1,9 @@
+.session {
+  margin: 1em;
+  font-size: 24px;
+}
+
+.session button {
+  padding: 1em 2em;
+  font-weight: 700;
+}

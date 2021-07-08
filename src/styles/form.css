@@ -53,7 +53,7 @@ input {
   width: 12em;
 }
 
-button {
+div.userForm form button {
   display: block;
   width: 9em;
   margin: 1em auto;
