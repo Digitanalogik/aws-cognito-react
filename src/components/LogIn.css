@@ -1,13 +1,13 @@
-div.signup {
+div.login {
   margin: 1em;
-  border: solid 2px #57007D;
-  background-color: #D173FA;
+  border: solid 2px #270043;
+  background-color: #9E2AF1;
 }
 
-#signupForm {
+#loginForm {
   display: block;
-  border-top: solid 1px #57007D;
-  background-color: #F4DAFE;
+  border-top: solid 1px #270043;
+  background-color: #C47FF5;
   padding-top: 2em;
   padding-bottom: 2em;
 }

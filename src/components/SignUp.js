@@ -13,13 +13,13 @@ const SignUp = () => {
           console.error(err);
         }
         console.log(data);
-    })
+    });
   }
 
   return (
     <div className="signup">
-      <h3>Sign up </h3>
-      <form onSubmit={onSubmit}>
+      <h3>Sign Up</h3>
+      <form id="signupForm" onSubmit={onSubmit}>
         <div className="field">
           <label htmlFor="email">Email</label>
           <input
