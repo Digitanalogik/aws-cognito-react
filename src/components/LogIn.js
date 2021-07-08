@@ -1,41 +1,28 @@
-import React, { useState } from 'react';
-import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
-import UserPool from './UserPool';
-import './LogIn.css';
+import React, { useState, useContext } from 'react';
+import { AccountContext } from './Account';
+import '../styles/form.css';
 
 const LogIn = () => {
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState(""); 
 
+  const { authenticate } = useContext(AccountContext);
+
   const onSubmit = (event) => {
     event.preventDefault();
-
-    const user = new CognitoUser({ 
-      Username: email,
-      Pool: UserPool
-    });
-
-    const authDetails = new AuthenticationDetails({
-      Username: email,
-      Password: password
-    });
-
-    user.authenticateUser(authDetails, {
-      onSuccess: (data) => {
-        console.log("onSuccess: ", data);
-      },
-      onFailure: (err) => {
-        console.error("onFailure: ", err);
-      },
-      newPasswordRequired: (data) => {
-        console.log("newPasswordRequired: ", data);
-      }
-    });
+    
+    authenticate(email, password)
+      .then(data => {
+        console.log("Logged in!", data);
+      })
+      .catch(err => {
+        console.error("Failed to login!", err);
+      });
   }
 
   return (
-    <div className="login">
-      <h3>Log In</h3>
+    <div className="userForm login">
+      <h3 className="title">Log In</h3>
       <form id="loginForm" onSubmit={onSubmit}>
         <div className="field">
           <label htmlFor="email">Email</label>
@@ -55,6 +42,6 @@ const LogIn = () => {
       </form>
     </div>
   )
-}
+};
 
 export default LogIn;

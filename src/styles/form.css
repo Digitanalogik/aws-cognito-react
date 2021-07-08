@@ -1,15 +1,39 @@
-div.signup {
+div.userForm {
+  display: block;
   margin: 1em;
+  width: 20em;  
+}
+
+div.userForm form {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+div.signup {
   border: solid 2px #57007D;
   background-color: #D173FA;
 }
 
 #signupForm {
-  display: block;
   border-top: solid 1px #57007D;
   background-color: #F4DAFE;
+}
+
+div.login {
+  border: solid 2px #270043;
+  background-color: #9E2AF1;
+}
+
+#loginForm {
+  display: block;
+  border-top: solid 1px #270043;
+  background-color: #C47FF5;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+h3.title {
+  margin-left: 2em;
 }
 
 div.field {
@@ -31,6 +55,6 @@ input {
 
 button {
   display: block;
-  width: 10em;
+  width: 9em;
   margin: 1em auto;
 }

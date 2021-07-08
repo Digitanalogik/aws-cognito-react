@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import UserPool from './UserPool';
-import './SignUp.css';
+import '../styles/form.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState(""); 
@@ -17,8 +17,8 @@ const SignUp = () => {
   }
 
   return (
-    <div className="signup">
-      <h3>Sign Up</h3>
+    <div className="userForm signup">
+      <h3 className="title">Sign Up</h3>
       <form id="signupForm" onSubmit={onSubmit}>
         <div className="field">
           <label htmlFor="email">Email</label>
@@ -38,6 +38,6 @@ const SignUp = () => {
       </form>
     </div>
   )
-}
+};
 
 export default SignUp;
